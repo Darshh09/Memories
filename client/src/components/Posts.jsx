@@ -21,7 +21,7 @@ const Posts = () => {
   return (
     <Box flexDirection = {'row'}>
 
-      <Grid templateColumns='repeat(2, 1fr)' gap= {4} >
+      <Grid templateColumns='repeat(2, 1fr)' gap= {2} >
       {loader ? <Center height={'50vh'} width = {'80vh'}>
         <motion.div
            style={{backgroundColor: 'white', width : '50px', height : '50px', marginTop : '80px'}}
@@ -39,7 +39,7 @@ const Posts = () => {
           }}
         />
       </Center>    : data.map(post => 
-      <GridItem w='100%' >
+      <GridItem w='100%' marginInlineEnd={5} >
       <Post post={post} />
       </GridItem>
       ) }

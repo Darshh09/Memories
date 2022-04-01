@@ -7,8 +7,9 @@ import {
   Button,
   Heading,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ setisSignIn }) => {
   return (
     <Flex padding={5} bg = {'white'}>
       <Box p="2">
@@ -16,10 +17,14 @@ const Navbar = () => {
       </Box>
       <Spacer />
       <Box>
-        <Button colorScheme="teal" mr="4">
+        <Link to="/auth" >
+        <Button colorScheme="teal" mr="4" onClick={() => setisSignIn(false)} >
           Sign Up
         </Button>
-        <Button colorScheme="teal">Log in</Button>
+        </Link>
+        <Link to="/auth" >
+        <Button colorScheme="teal" onClick={() => setisSignIn(true)}>Log in</Button>
+        </Link>
       </Box>
     </Flex>
   );

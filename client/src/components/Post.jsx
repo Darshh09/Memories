@@ -8,10 +8,8 @@ const Post = ({post}) => {
 
 
   return (
-    <motion.div initial={false}
-    animate={{ x : 10}}
-    style={{ width: "100%", height: "100%", marginTop : "30px" }}>
-       <Box backgroundColor={'white'} maxW='sm' borderWidth='1px' alignItems={'center'} borderRadius='lg' overflow='hidden'>   
+ 
+       <Box marginTop={5} backgroundColor={'white'} maxW='sm' borderWidth='1px' alignItems={'center'} borderRadius='lg' overflow='hidden'>   
              <Image height={"80%"} width = {'80%'} alignSelf = "center" src={post.selectedFile} />
              <Box p='6'>
             <Box display='flex' alignItems='baseline'>
@@ -55,7 +53,7 @@ const Post = ({post}) => {
 
           </Box>
        </Box>
-    </motion.div>
+  
   )
 }
 
